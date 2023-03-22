@@ -11,3 +11,126 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.home{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(177, 20, 93);
+  font-size: 25px;
+  
+}
+.header{
+  width: 100%;
+  font-size: 25px;
+  color: rgb(158, 41, 142);
+  text-decoration:none;
+ 
+}
+.ul{
+  width: 100%;
+padding: 1%;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+  align-items: center;
+  background-color: rgb(32, 191, 219);
+}
+.link{
+  text-decoration: none;
+  color: rgb(158, 41, 142);
+}
+.login{
+  width: 100%;
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+   
+
+}
+.form input{
+width: 500px;
+font-size:20px;
+padding: 2%;
+margin: 10px;
+  
+  background-color: rgb(182, 231, 225);
+}
+.btn{
+  width:100px;
+  padding: 2%;
+  margin: 10px;
+  font-size: 20px;
+  background-color: rgb(15, 134, 134);
+  color:white;
+  border: none;
+  border-radius: 12px;
+}
+
+.btn:hover{
+  color: rgb(58, 61, 61);
+  background-color: rgb(15, 223, 212);
+  
+}
+.user{
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  color: rgb(15, 60, 206);
+  font-size: 25px;
+}
+.pera{
+  color: red;
+
+}
+.box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-box input{
+  width: 500px;
+font-size:15px;
+padding: 3%;
+margin: 9px;
+border: none;
+  
+  background-color: rgb(182, 231, 225);
+
+}
+.form-box textarea{
+  width: 500px;
+font-size:15px;
+padding: 3%;
+margin: 9px;
+border: none;
+  
+  background-color: rgb(182, 231, 225);
+
+}
+
+.table, th, td {
+  border: 1px solid black;
+}
+.table{
+  width: 90%;
+ 
+  border: 1px solid black;
+  
+}
+.table th{
+  background-color: rgb(132, 172, 196);
+}
+
+
+.class-name{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.radio{
+  width:10px;
+}
