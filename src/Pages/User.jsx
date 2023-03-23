@@ -5,7 +5,8 @@ import { db } from '../firebase';
 
 import {toast } from 'react-toastify';
 
-function User() {
+function User  (inputs)  {
+  const [data ,setData]=useState({})
     const [email ,setEmail] = useState()
     const [name ,setName] = useState()
     const [age ,setAge] = useState()
@@ -15,9 +16,17 @@ function User() {
     const [day,setDay] = useState()
     const [message,setMessage] = useState() 
 
+
+    const handleInput =(e)=>{
+      const id =e.target.id;
+      const value = e.target.value;
+
+      setData({...data ,[id]:value})
+    }
+    console.log(setData)
+    
   const handleAdd =async(e)=>{
     e.preventDefault()
-
     try{
       const res = await addDoc(collection(db, "users",), {
         name: "abc",
@@ -31,7 +40,7 @@ function User() {
   
         
       });
-      console.log(res)
+      
     }
     
 
@@ -43,6 +52,7 @@ function User() {
      }
   }
    
+    
 
     
   return (
@@ -59,7 +69,19 @@ function User() {
         
         <input type="day" placeholder='Day' value={day} onChange={(e)=>setDay(e.target.value)}/><br/>
 
-         <textarea type="message" placeholder="Message" value={message} onChange={(e)=>setMessage(e.target.value)}></textarea>      
+         <input type="message" placeholder="Message" value={message} onChange={(e)=>setMessage(e.target.value)}/> 
+
+         {/* {inputs.map((input) => (
+                <div className="formInput" key={input.id}>
+                  <label>{input.label}</label>
+                  <input
+                    id={input.id}
+                    type={input.type}
+                    placeholder={input.placeholder}
+                    onChange={handleInput}   
+                  />
+                </div>
+              ))}   */}
         <button className='btn' type='submit' >Submit</button>
         
     </form>
